@@ -6,6 +6,7 @@ import 'package:taskmanagment/constants/data.dart';
 import 'package:taskmanagment/constants/sizes.dart';
 import 'package:taskmanagment/presentation/home/widgets/grid_tile.dart';
 import 'package:taskmanagment/presentation/home/widgets/header.dart';
+import 'package:taskmanagment/presentation/home/widgets/sub_title.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HeadWidget(),
               kHeight(context, 40),
-              subTitle('Hello', Colors.grey),
+              const SubtTitle(text: 'Hello', color: Colors.grey),
               mainHeading(),
               kHeight(context, 35),
               Row(
@@ -58,12 +59,12 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               kHeight(context, 50),
-              Row(
+              const Row(
                 children: [
-                  subTitle('Daily Task', Colors.black),
-                  const Spacer(),
-                  const Text('All Task'),
-                  const Icon(Icons.arrow_drop_down_sharp)
+                  SubtTitle(text: 'Daily Task', color: Colors.black),
+                  Spacer(),
+                  Text('All Task'),
+                  Icon(Icons.arrow_drop_down_sharp)
                 ],
               ),
               ListView.separated(
@@ -81,29 +82,15 @@ class HomeScreen extends StatelessWidget {
     ));
   }
 
-  Text mainHeading() {
+  mainHeading() {
     return Text(
       'Alex Marconi',
       style: GoogleFonts.roboto(
         textStyle: const TextStyle(
           letterSpacing: .5,
-          fontSize: 30,
+          fontSize: 28,
           color: Colors.black,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    );
-  }
-
-  Text subTitle(String text, Color color) {
-    return Text(
-      text,
-      style: GoogleFonts.roboto(
-        textStyle: TextStyle(
-          letterSpacing: .5,
-          fontSize: 25,
-          color: color,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
         ),
       ),
     );

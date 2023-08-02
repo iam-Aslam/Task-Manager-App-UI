@@ -8,8 +8,8 @@ import 'package:taskmanagment/presentation/message/screen/message.dart';
 import 'package:taskmanagment/presentation/project/screen/project.dart';
 import 'package:taskmanagment/presentation/settings/screen/settings.dart';
 
-class DashboardScreen extends StatelessWidget {
-  DashboardScreen({super.key});
+class Dashboard extends StatelessWidget {
+  Dashboard({super.key});
   final controller = PersistentTabController(initialIndex: 0);
   List<Widget> buildScreen() {
     return [
