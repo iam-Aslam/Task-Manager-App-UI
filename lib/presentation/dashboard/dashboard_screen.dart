@@ -13,7 +13,7 @@ class Dashboard extends StatelessWidget {
   final controller = PersistentTabController(initialIndex: 0);
   List<Widget> buildScreen() {
     return [
-      HomeScreen(),
+      const HomeScreen(),
       const ProjectScreen(),
       const AddTaskScreen(),
       const MessageScreen(),

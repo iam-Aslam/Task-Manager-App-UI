@@ -4,6 +4,8 @@ import 'package:taskmanagment/constants/sizes.dart';
 import 'package:taskmanagment/presentation/dashboard_design/widgets/dashboard_design_tile.dart';
 import 'package:taskmanagment/presentation/dashboard_design/widgets/header_dashboard.dart';
 import 'package:taskmanagment/presentation/dashboard_design/widgets/project_item.dart';
+import 'package:taskmanagment/presentation/home/widgets/chart.dart';
+import 'package:taskmanagment/presentation/home/widgets/dropdown.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -83,7 +85,28 @@ class DashboardScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Project Overview',
+                        style: GoogleFonts.roboto(
+                          textStyle: const TextStyle(
+                            letterSpacing: .5,
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                      const DropdownButtonWidget(),
+                    ],
+                  ),
+                ),
+                const ChartWidget()
               ],
             ),
           ),
